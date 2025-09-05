@@ -1,0 +1,26 @@
+{
+  "name": "laudo-tecnico-contabil",
+  "version": "1.0.0",
+  "description": "Sistema de análise de DIFAL em prestações de serviço de transporte",
+  "main": "laudo.html",
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "build": "echo 'Build completed - static files ready'",
+    "dev": "npx serve -s . -l 3000"
+  },
+  "keywords": [
+    "laudo",
+    "contabilidade",
+    "difal",
+    "icms",
+    "transporte"
+  ],
+  "author": "CodeWithSouza",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
