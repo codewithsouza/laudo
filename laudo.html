@@ -377,7 +377,7 @@
                 contribuintesList.innerHTML = '';
                 razaoSocialList.innerHTML = '';
 
-                const anomaliasContribuintes = processedCteData.filter(c => c.anomaliaContribuinte && c.tomador !== 'D.VILLAS LTDA');
+                const anomaliasContribuintes = processedCteData.filter(c => c.anomaliaContribuinte && c.tomador !== 'D.VILLAS LTDA' && c.tomador !== 'GOL REPRESENTACOES LTDA - EPP');
                 const anomaliasRazaoSocial = processedCteData.filter(c => c.anomalia === 'razao_social');
 
                 let contribuintesUnicos = [...new Map(anomaliasContribuintes.map(item => [item['tomador'], item])).values()];
