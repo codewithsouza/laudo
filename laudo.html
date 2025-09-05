@@ -280,6 +280,9 @@
             {data: "29/08/2025", numero: "215263", tomador: "CHRISTIAN NORBERTO LAGE DE OLIVEIRA", cnpj: "68854277649", ie: "", valor: 10.00}
         ];
         
+        console.log('Total de CT-es carregadas:', cteData.length);
+        console.log('CT-e da GOL encontrada:', cteData.find(item => item.numero === '215139'));
+        
         const processedCteData = cteData.map(item => {
             let anomalia = null;
             if (item.tomador === 'JOSE EUDES DOS SANTOS FREITAS 9007640062') {
@@ -308,6 +311,9 @@
 
             const totalFrete = processedCteData.reduce((sum, item) => sum + item.valor, 0);
             const totalDifal = 998.18; // Valor correto - CT-e GOL incluída
+            
+            console.log('Total de CT-es processadas:', processedCteData.length);
+            console.log('CT-e da GOL processada:', processedCteData.find(item => item.numero === '215139'));
             
             totalDifalEl.textContent = formatCurrency(totalDifal);
             totalFreteEl.textContent = formatCurrency(totalFrete);
