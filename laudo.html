@@ -307,7 +307,7 @@
             const formatCurrency = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             const totalFrete = processedCteData.reduce((sum, item) => sum + item.valor, 0);
-            const totalDifal = 998.18; // Valor correto
+            const totalDifal = 998.18; // Valor correto - CT-e GOL incluída
             
             totalDifalEl.textContent = formatCurrency(totalDifal);
             totalFreteEl.textContent = formatCurrency(totalFrete);
